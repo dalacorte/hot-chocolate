@@ -10,11 +10,5 @@ namespace CommanderGQL.Models
         public string Description { get; set; }
 
         public virtual ICollection<Ingredient> Ingredients { get; set; }
-
-        public Drink(string name, string description)
-        {
-            Name = name;
-            Description = description;
-        }
     }
 }

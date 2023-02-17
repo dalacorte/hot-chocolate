@@ -1,21 +1,22 @@
 ﻿using CommanderGQL.Data;
 using CommanderGQL.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace CommanderGQL.GraphQL
 {
     public class Query
     {
         [UseDbContext(typeof(AppDbContext))]
-        public IQueryable<Drink> GetDrink([Service] AppDbContext context)
+        [UseProjection]
+        public IQueryable<Drink> GetDrink(AppDbContext context)
         {
-            return context.Drinks.Include(i => i.Ingredients);
+            return context.Drinks;
         }
 
         [UseDbContext(typeof(AppDbContext))]
-        public IQueryable<Ingredient> GetIngredient([Service] AppDbContext context)
+        [UseProjection]
+        public IQueryable<Ingredient> GetIngredient(AppDbContext context)
         {
-            return context.Ingredients.Include(i => i.Drink);
+            return context.Ingredients;
         }
     }
 }

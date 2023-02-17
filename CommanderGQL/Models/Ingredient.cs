@@ -10,10 +10,5 @@ namespace CommanderGQL.Models
         public int DrinkId { get; set; }
 
         public Drink Drink { get; set; }
-
-        public Ingredient(string name)
-        {
-            Name = name;
-        }
     }
 }
