@@ -1,6 +1,6 @@
-﻿using CommanderGQL.Models;
+﻿using GQL.Models;
 
-namespace CommanderGQL.GraphQL.Drinks
+namespace GQL.GraphQL.Drinks
 {
     public record AddIngredientPayload(Ingredient ingredient);
 }

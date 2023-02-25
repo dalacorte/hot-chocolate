@@ -1,7 +1,7 @@
-using CommanderGQL.Data;
-using CommanderGQL.GraphQL;
-using CommanderGQL.GraphQL.Drinks;
-using CommanderGQL.GraphQL.Ingredients;
+using GQL.Data;
+using GQL.GraphQL;
+using GQL.GraphQL.Drinks;
+using GQL.GraphQL.Ingredients;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

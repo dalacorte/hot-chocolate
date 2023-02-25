@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace CommanderGQL.Migrations
+namespace GQL.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

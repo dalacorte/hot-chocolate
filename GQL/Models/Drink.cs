@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CommanderGQL.Models
+namespace GQL.Models
 {
     public class Drink
     {

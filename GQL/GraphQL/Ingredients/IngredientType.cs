@@ -1,8 +1,8 @@
-﻿using CommanderGQL.Data;
-using CommanderGQL.Models;
+﻿using GQL.Data;
+using GQL.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CommanderGQL.GraphQL.Ingredients
+namespace GQL.GraphQL.Ingredients
 {
     public class IngredientType : ObjectType<Ingredient>
     {

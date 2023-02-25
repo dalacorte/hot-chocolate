@@ -1,7 +1,7 @@
-﻿using CommanderGQL.Data;
-using CommanderGQL.Models;
+﻿using GQL.Data;
+using GQL.Models;
 
-namespace CommanderGQL.GraphQL
+namespace GQL.GraphQL
 {
     public class Query
     {

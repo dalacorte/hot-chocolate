@@ -1,6 +1,6 @@
-﻿using CommanderGQL.Models;
+﻿using GQL.Models;
 
-namespace CommanderGQL.GraphQL
+namespace GQL.GraphQL
 {
     public class Subscription
     {

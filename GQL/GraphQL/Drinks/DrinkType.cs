@@ -1,8 +1,8 @@
-﻿using CommanderGQL.Data;
-using CommanderGQL.Models;
+﻿using GQL.Data;
+using GQL.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CommanderGQL.GraphQL.Drinks
+namespace GQL.GraphQL.Drinks
 {
     public class DrinkType : ObjectType<Drink>
     {

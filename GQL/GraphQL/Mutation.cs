@@ -1,9 +1,9 @@
-﻿using CommanderGQL.Data;
-using CommanderGQL.GraphQL.Drinks;
-using CommanderGQL.Models;
+﻿using GQL.Data;
+using GQL.GraphQL.Drinks;
+using GQL.Models;
 using HotChocolate.Subscriptions;
 
-namespace CommanderGQL.GraphQL
+namespace GQL.GraphQL
 {
     public class Mutation
     {
