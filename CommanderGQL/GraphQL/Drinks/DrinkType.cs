@@ -1,5 +1,6 @@
 ﻿using CommanderGQL.Data;
 using CommanderGQL.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CommanderGQL.GraphQL.Drinks
 {
@@ -18,11 +19,11 @@ namespace CommanderGQL.GraphQL.Drinks
                 .UseProjection();
         }
 
-        private class Resolvers
+        protected class Resolvers
         {
             public IQueryable<Ingredient> GetIngredients([Parent] Drink drink, AppDbContext context)
             {
-                return context.Ingredients;
+                return context.Ingredients.Where(i => i.DrinkId == drink.Id).Include(i => i.Drink);
             }
         }
     }

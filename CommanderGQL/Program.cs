@@ -10,9 +10,14 @@ builder.Services.AddPooledDbContextFactory<AppDbContext>(options => options.UseS
 
 builder.Services.AddGraphQLServer()
     .AddQueryType<Query>()
+    .AddMutationType<Mutation>()
+    .AddSubscriptionType<Subscription>()
     .AddType<DrinkType>()
     .AddType<IngredientType>()
     .AddProjections()
+    .AddFiltering()
+    .AddSorting()
+    .AddInMemorySubscriptions()
     .RegisterDbContext<AppDbContext>(DbContextKind.Pooled);
 
 

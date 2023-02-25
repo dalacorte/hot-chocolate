@@ -21,9 +21,9 @@ namespace CommanderGQL.GraphQL.Ingredients
 
         protected class Resolvers
         {
-            public IQueryable<Drink> GetDrink([Parent] Drink drink, AppDbContext context)
+            public IQueryable<Drink> GetDrink([Parent] Ingredient ingredient, AppDbContext context)
             {
-                return context.Drinks.Include(i => i.Ingredients);
+                return context.Drinks.Where(d => d.Id == ingredient.DrinkId).Include(d => d.Ingredients);
             }
         }
     }
